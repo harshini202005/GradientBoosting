@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Prediction Result</h2>
+        <p><strong>Predicted Income:</strong> {{ prediction }}</p>
+        <div class="input-summary">
+            <h3>Input Summary</h3>
+            <ul>
+                <li><strong>Age:</strong> {{ inputs["age"] }}</li>
+                <li><strong>Education Level:</strong> {{ inputs["education-num"] }}</li>
+                <li><strong>Hours per Week:</strong> {{ inputs["hours-per-week"] }}</li>
+                <li><strong>Capital Gain:</strong> {{ inputs["capital-gain"] }}</li>
+                <li><strong>Capital Loss:</strong> {{ inputs["capital-loss"] }}</li>
+            </ul>
+        </div>
+        <a class="btn" href="/">Try Again</a>
+    </div>
+</body>
+</html>
